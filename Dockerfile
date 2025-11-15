@@ -6,5 +6,5 @@ ENV N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
 ENV N8N_HOST=0.0.0.0
 ENV N8N_PORT=5678
 
-# This is the correct command
-CMD ["n8n"]
+# Use the entrypoint with start command instead of direct command
+CMD ["start"]
