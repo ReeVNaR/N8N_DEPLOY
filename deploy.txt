@@ -1,8 +1,0 @@
-FROM n8nio/n8n:latest
-
-ENV DB_TYPE=sqlite
-ENV DB_SQLITE_VACUUM_ON_STARTUP=true
-
-EXPOSE 5678
-CMD ["n8n"]
-
