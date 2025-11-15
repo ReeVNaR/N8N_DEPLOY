@@ -1,19 +1,18 @@
 services:
   - type: web
-    name: n8n-chatbot
+    name: n8n
     runtime: docker
-    plan: starter
+    dockerfilePath: ./Dockerfile
     envVars:
-      - key: N8N_ENCRYPTION_KEY
-        sync: false
-      - key: GOOGLE_GEMINI_API_KEY
-        sync: false
       - key: N8N_HOST
-        fromService:
-          name: n8n-chatbot
-          property: renderURL
-
-databases:
-  - name: n8n-db
-    databaseName: n8n
+        value: 0.0.0.0
+      - key: N8N_PORT
+        value: 3000
+      - key: N8N_PROTOCOL
+        value: https
+      - key: NODE_ENV
+        value: production
+      - key: GENERIC_TIMEZONE
+        value: UTC
+    healthCheckPath: /healthz
     plan: starter
