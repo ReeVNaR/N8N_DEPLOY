@@ -1,0 +1,18 @@
+{
+  "name": "n8n-chatbot",
+  "version": "1.0.0",
+  "description": "N8N ChatBot workflow for portfolio",
+  "main": "index.js",
+  "scripts": {
+    "start": "n8n start",
+    "dev": "n8n start --tunnel"
+  },
+  "dependencies": {
+    "n8n": "latest",
+    "n8n-nodes-base": "latest",
+    "@n8n/n8n-nodes-langchain": "latest"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
